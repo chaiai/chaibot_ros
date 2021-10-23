@@ -25,4 +25,8 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 
 # Install ROS2 Foxy base
 sudo apt update
-sudo apt install ros-foxy-ros-base
+sudo apt install -y ros-foxy-ros-base
+
+# Install extra packages
+sudo apt update
+sudo apt install -y ros-foxy-vision-msgs ros-foxy-launch-xml ros-foxy-launch-yaml python3-colcon-common-extensions
