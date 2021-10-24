@@ -27,6 +27,9 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 sudo apt update
 sudo apt install -y ros-foxy-ros-base
 
+# Add ROS path to bash environment
+sudo sh -c 'echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc'
+
 # Install extra packages
 sudo apt update
 sudo apt install -y ros-foxy-vision-msgs ros-foxy-launch-xml ros-foxy-launch-yaml python3-colcon-common-extensions
